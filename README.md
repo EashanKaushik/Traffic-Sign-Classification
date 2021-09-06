@@ -1,12 +1,12 @@
 # Traffic Sign Classification using LE-NET DEEP NETWORK
 
+![traffic signs](https://user-images.githubusercontent.com/50113394/132258226-4fe86c17-9413-40ea-bf3a-7c659b2a7e6f.PNG)
+
 ## Introduction
 
 Traffic sign classification is an important task for self driving cars.  
 In this project, a Deep Network known as LeNet will be used for traffic sign images classification.  
 The dataset contains 43 different classes of images.  
-
-![traffic signs](https://user-images.githubusercontent.com/50113394/132258226-4fe86c17-9413-40ea-bf3a-7c659b2a7e6f.PNG)
 
 Classes are as listed below:
 
@@ -54,7 +54,9 @@ Classes are as listed below:
 41 - End of no passing  
 42 - End of no passing by vehicles over 3.5 metric tons  
 
-TODO: Image Traffic
+## Data Exploration
+
+TODO: Images
 
 ## LENET Network Architecture
 
