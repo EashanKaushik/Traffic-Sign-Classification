@@ -1,6 +1,8 @@
 # Traffic Sign Classification using LE-NET DEEP NETWORK
 
-![traffic signs](https://user-images.githubusercontent.com/50113394/132258226-4fe86c17-9413-40ea-bf3a-7c659b2a7e6f.PNG)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/50113394/132258226-4fe86c17-9413-40ea-bf3a-7c659b2a7e6f.PNG" />
+</p>
 
 ## Introduction
 
@@ -94,8 +96,32 @@ TODO: Images
 
 ## Model Evaluation
 
-TODO: Evaluation
+Our model achieved accuracy of 91% on test dataset.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/50113394/132401130-4197423f-7ac0-4955-ae86-8f58ad4ab2dd.PNG" />
+</p>
+
+The following graphs show the relationship between loss and accuracy of training and validation dataset.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/50113394/132401156-afb275bb-71cf-4e70-85a0-ab5f3af00416.PNG" />
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/50113394/132401194-a82ab261-b5bd-4031-abd2-6ea72111eadd.PNG" />
+</p>
 
 ## Model Deployment
 
-Model was deployed using Amazone Web Services (AWS) EC2 instance on an Ubuntu server and can be viewed here: TODO: Website
+Website to deploy was made using HTML, CSS, Javascript and Flask framkework.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/50113394/132401340-bc99df8c-2e65-450d-af59-9faaad16bb8b.PNG" />
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/50113394/132401374-b74af093-0ad4-4114-a47e-faefa214e902.PNG" />
+</p>
+
+Model was deployed using Amazone Web Services (AWS) EC2 instance on an Ubuntu server and can be viewed here: TODO: Deployed Website
