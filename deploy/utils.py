@@ -2,36 +2,33 @@ from tensorflow.keras.models import load_model
 from pickle import load
 import numpy as np
 import matplotlib.pyplot as plt
+from keras.models import model_from_json
+import pickle
 
-# MODEL_PATH = 'model/20210720-184145.h5'
-# CLASS_LABEL_PATH = 'model/cifar_label_name.pkl'
-
-# model = load_model(MODEL_PATH)
+MODEL_WEIGHT_PATH = 'LeNet/model.h5'
+MODEL_PATH = 'LeNet/model.json'
+CLASS_LABEL_PATH = 'LeNet/labels.pickle'
 
 def make_prediction(image):
-    pass
     
-#     class_label = load(open(CLASS_LABEL_PATH, 'rb'))
-
-#     labels = [l.decode('utf-8') for l in class_label]
-
-#     y_pred = model.predict(image)
-
-#     val = dict(zip(labels, y_pred.tolist()[0]))
-
-#     class_index = np.argmax(y_pred, axis=1)
-#     class_label = class_label[class_index]
-#     class_label = class_label[0].decode('utf-8')
-
-#     color_list = ['#800000', '#e6194B', '#f58231', '#ffe119', '#bfef45', '#aaffc3', '#dcbeff', '#469990', '#9A6324', '#808000']
-#     count = 0
+    # Model JSON
+    json_file = open(MODEL_PATH, 'r')
+    loaded_model_json = json_file.read()
+    json_file.close()
     
-#     plt.figure(figsize=(12,10))
-#     barlist=plt.bar(val.keys(), val.values())
-#     for barl in barlist:
-#         barl.set_color(color_list[count])
-#         count += 1
-#     plt.grid()
-#     plt.savefig('static/images/graph.jpg')
+    loaded_model = model_from_json(loaded_model_json)
+    
+    # load weights into new model
+    loaded_model.load_weights(MODEL_WEIGHT_PATH)
+    
+    print("Loaded model from disk")
 
-#     return class_label
+    # load class labels
+    file_to_read = open(CLASS_LABEL_PATH, "rb")
+    labels = pickle.load(file_to_read)
+
+    y_pred = loaded_model.predict(image)
+
+    class_label = labels[np.argmax(y_pred)]
+
+    return class_label

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-s
+
 <html>
 	<head>
 		<title>{{ pagename }}</title>
@@ -127,14 +127,26 @@ s
 							<!-- Section -->
 								<section>
 									<header>
-										<h3>Make Prediction</h3>
+										<h3>Make Prediction's</h3>
 									</header>
 									<div class="content">
-										<div class="gallery">
-											<a href="images/gallery/fulls/05.jpg" class="landscape"><img src="{{ url_for('static',filename='images/gallery/thumbs/05.jpg') }}" alt="" /></a>
-											<a href="images/gallery/fulls/06.jpg"><img src="{{ url_for('static',filename='images/gallery/thumbs/06.jpg') }}" alt="" /></a>
-											<a href="images/gallery/fulls/07.jpg"><img src="{{ url_for('static',filename='images/gallery/thumbs/07.jpg') }}" alt="" /></a>
-										</div>
+										<h3>It's simple upload an image and we will classify it for you !!</h3>
+										<form action="#" method="post" enctype="multipart/form-data">
+											<div class="fields">
+												<div class="field half">
+													<input type="file" name="imgfile" id="imgfile" placeholder="Name" />
+												</div>
+											</div>
+											<ul class="actions">
+                                                <li><input type="submit" value="Predict" class="button primary fit"/></li>
+                                            </ul>
+										</form>
+										{% if file_upload %}
+											<h2>Image is a sign of {{ data['class_label'] }}</h2>
+											<p align="center">
+												<a href="{{ url_for('static', filename='images/upload.JPG') }}" class="landscape"><img src="{{ url_for('static', filename='images/upload.JPG') }}" alt="" /></a>                                        
+											</p>
+										{% endif %}
 									</div>
 								</section>
 
