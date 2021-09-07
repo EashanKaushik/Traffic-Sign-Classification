@@ -1,7 +1,6 @@
 from tensorflow.keras.models import load_model
 from pickle import load
 import numpy as np
-import matplotlib.pyplot as plt
 from keras.models import model_from_json
 import pickle
 

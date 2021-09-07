@@ -124,4 +124,4 @@ Website to deploy was made using HTML, CSS, Javascript and Flask framkework.
   <img src="https://user-images.githubusercontent.com/50113394/132401374-b74af093-0ad4-4114-a47e-faefa214e902.PNG" />
 </p>
 
-Model was deployed using Amazone Web Services (AWS) EC2 instance on an Ubuntu server and can be viewed here: TODO: Deployed Website
+Model was deployed using Amazone Web Services (AWS) EC2 instance on an Ubuntu server and can be viewed here: http://18.221.118.20/home
